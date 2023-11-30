@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantastic Site</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(to right, #3494e6, #ec6ead);
+            font-family: 'Arial', sans-serif;
+        }
+
+        .word-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.5s;
+        }
+
+        .word {
+            font-size: 2em;
+            color: red;
+            margin: 10px;
+        }
+        .centre{
+            display: flex;
+            justify-content: center;
+            color: white;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="centre">
+    Созданием сайтов🤭
+</div>
+<div class="word-container" onclick="rotateWord()">
+    <div class="word">Click</div>
+</div>
+
+<script>
+    let rotation = 0;
+
+    function rotateWord() {
+        rotation += 360;
+        document.querySelector('.word-container').style.transform = `rotate(${rotation}deg)`;
+    }
+</script>
+</body>
+</html>
